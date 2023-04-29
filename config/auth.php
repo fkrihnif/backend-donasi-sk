@@ -37,10 +37,16 @@ return [
 
     'guards' => [
         'web' => [
-            'driver' => 'session',
-            'provider' => 'users',
+           'driver' => 'session',
+           'provider' => 'users',
         ],
-    ],
+     
+        'api' => [
+           'driver' => 'passport',		// <-- set ke "passport"
+           'provider' => 'donaturs',		// <-- set ke "donaturs"
+           'hash' => false,		
+        ],
+     ],
 
     /*
     |--------------------------------------------------------------------------
@@ -64,12 +70,12 @@ return [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
-    ],
+     
+        'donaturs' => [								// <-- nama provider "donaturs"
+            'driver' => 'eloquent',					// < -- driver "eloquent"
+            'model' => App\Models\Donatur::class,	// <-- model 'app/Models/Donatur.php'	
+        ],
+     ],
 
     /*
     |--------------------------------------------------------------------------
