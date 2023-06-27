@@ -10,7 +10,7 @@ class CampaignController extends Controller
 {
     /**
      * index
-     * test
+     * 
      * @return void
      */
     public function index()
@@ -20,7 +20,8 @@ class CampaignController extends Controller
             $campaigns = $campaigns->where('title', 'like', '%'. request()->q . '%');
         })->latest()->paginate(5);
 
-        //return with response JSON
+
+        //return with response JSONn
         return response()->json([
             'success' => true,
             'message' => 'List Data Campaigns',
