@@ -10,7 +10,7 @@ class CampaignController extends Controller
 {
     /**
      * index
-     *
+     * test
      * @return void
      */
     public function index()
